@@ -4,11 +4,65 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <script defer src="app.js"></script>
     <title>To-Do-App</title>
   </head>
   <body>
-    test
+    <div class="heading">
+      <h1>To-Do list</h1>
+    </div>
+
+    <form>
+      <input
+        type="text"
+        class="input__field"
+        placeholder="Enter your task..."
+      />
+      <button class="btn" type="button">
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </button>
+    </form>
+    <div class="todo__container">
+      <ul class="todo__list">
+        <div class="todo">
+          <li class="todo__item">test Lorem ipsum dolor sit amet, c</li>
+          <button class="task__btn done">
+            <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+          </button>
+          <button class="task__btn delete">
+            <ion-icon name="trash-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="todo">
+          <li class="todo__item">test Lorem ipsum dolor sit amet, c</li>
+          <button class="task__btn done">
+            <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+          </button>
+          <button class="task__btn delete">
+            <ion-icon name="trash-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="todo">
+          <li class="todo__item">test Lorem ipsum dolor sit amet, c</li>
+          <button class="task__btn done">
+            <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+          </button>
+          <button class="task__btn delete">
+            <ion-icon name="trash-outline"></ion-icon>
+          </button>
+        </div>
+      </ul>
+    </div>
   </body>
 </html>
