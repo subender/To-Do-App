@@ -131,6 +131,10 @@ form .btn:hover {
   color: #e84118;
 }
 
+ion-icon {
+  pointer-events: none;
+}
+
 .drop {
   transform: translateY(12rem) rotateX(30deg) rotateY(30deg);
   opacity: 0;
