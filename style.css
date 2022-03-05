@@ -136,6 +136,7 @@ form .btn:hover {
   min-width: 50%;
 }
 
+/* Task Completed Style  */
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
@@ -172,6 +173,7 @@ ion-icon {
   pointer-events: none;
 }
 
+/* Delete animation */
 .drop {
   transform: translateY(12rem) rotateX(30deg) rotateY(30deg);
   opacity: 0;
