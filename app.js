@@ -1,10 +1,12 @@
 const inputFieldEl = document.querySelector(".input__field");
 const addButton = document.querySelector(".btn");
 const todoListEl = document.querySelector(".todo__list");
+const filterTaskEl = document.querySelector(".filter__tasks");
 
 // Event Listners
 
-addButton.addEventListener("click", () => {
+addButton.addEventListener("click", (e) => {
+  e.preventDefault();
   if (inputFieldEl.value !== "") {
     createTask(inputFieldEl.value);
   }
@@ -13,8 +15,9 @@ addButton.addEventListener("click", () => {
 });
 
 todoListEl.addEventListener("click", deleteTask);
-
 todoListEl.addEventListener("click", markComplete);
+
+filterTaskEl.addEventListener("click", filterTasks);
 
 //Functions
 
@@ -65,6 +68,32 @@ function markComplete(e) {
   if (item.classList[1] === "done") {
     const task = item.closest(".todo");
     task.style.color = "#000";
-    task.classList.add("completed");
+    task.classList.toggle("completed");
   }
+}
+
+function filterTasks(e) {
+  const tasks = todoListEl.childNodes;
+  tasks.forEach((task) => {
+    switch (e.target.value) {
+      case "all":
+        task.style.display = "flex";
+        break;
+
+      case "completed":
+        if (task.classList.contains("completed")) {
+          task.style.display = "flex";
+        } else {
+          task.style.display = "none";
+        }
+        break;
+
+      case "incomplete":
+        if (!task.classList.contains("completed")) {
+          task.style.display = "flex";
+        } else {
+          task.style.display = "none";
+        }
+    }
+  });
 }

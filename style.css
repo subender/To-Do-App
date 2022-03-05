@@ -65,6 +65,43 @@ form .btn:hover {
   background-color: #4300ca;
 }
 
+.select {
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.select select {
+  height: 4.5rem;
+  background-color: #fff;
+  outline: none;
+  padding: 1rem;
+  width: 15rem;
+  font-size: 2rem;
+  color: #686868;
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select::after {
+  content: "\25bc";
+  color: #4300ca;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.2s ease-in;
+}
+
+.select:hover::after {
+  color: #fff;
+  background-color: #4300ca;
+}
+
 .todo__container {
   display: flex;
   justify-content: center;

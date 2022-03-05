@@ -27,9 +27,17 @@
         class="input__field"
         placeholder="Enter your task..."
       />
-      <button class="btn" type="button">
+      <button class="btn" type="submit">
         <ion-icon name="add-circle-outline"></ion-icon>
       </button>
+
+      <div class="select">
+        <select name="tasks" class="filter__tasks">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="incomplete">Incomplete</option>
+        </select>
+      </div>
     </form>
     <div class="todo__container">
       <ul class="todo__list"></ul>
